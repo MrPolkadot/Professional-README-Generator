@@ -1,66 +1,82 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
+
 // TODO: Create an array of questions for user input
 const questions = inquirer.prompt([
     {
         type: "input",
-        name: "title",
-        question1: "What title shall we use for your project?",
+        name: "Title",
+        message: "What title shall we use for your project?",
     },
     {
         type: "input",
-        name: "description",
-        question2: "Enter your project description",
+        name: "Description",
+        message: "Enter your project description",
     },
     {
         type: "input",
-        name: "",
-        question3: "",
+        name: "Installation",
+        message: "Write any installation instructions here",
     },
     {
         type: "input",
-        name: "",
-        question4: "",
+        name: "Usage",
+        message: "Provide any examples, links or outputs of your project",
     },
     {
         type: "input",
-        name: "",
-        question5: "",
+        name: "Contributing",
+        message: "State if you are open to contributions and what your requirements are for accepting them"
     },
     {
         type: "input",
-        name: "",
-        question6: "",
+        name: "Tests",
+        message: "Document any instructions for running tests on your project",
+    },
+    {
+        type: "list",
+        name: "License",
+        message: "Choose a license:",
+        choices: [
+            'None',
+            'Apache License 2.0',
+            'GNU General Public License v3.0',
+            'MIT License',
+            'BSD 2-Clause "Simplified" License',
+            'BSD 3-Clause "New" or "Revised" License',
+            'Boost Software License 1.0',
+            'Creative Commons Zero v1.0 Universal',
+            'Eclipse Public License 2.0',
+            'GNU Affero General Public License v3.0',
+            'GNU General Public License v2.0',
+            'GNU Lesser General Public License v2.1',
+            'Mozilla Public License 2.0',
+            'The Unlicense'
+        ]
     },
     {
         type: "input",
-        name: "",
-        question7: "",
+        name: "username",
+        message: "Enter your GitHub username",
     },
     {
         type: "input",
-        name: "",
-        question8: "",
+        name: "email",
+        message: "Enter your email address",
     },
-    {
-        type: "input",
-        name: "",
-        question9: "",
-    },
-    {
-        type: "input",
-        name: "",
-        question10: "",
-    },
-]
-);
+]);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    fs.writeFile('README.md',);
+}
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+
+}
 
 // Function call to initialize app
 init();
