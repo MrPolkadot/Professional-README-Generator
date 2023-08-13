@@ -1,2 +1,29 @@
-useful links: 
-https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba (license badges and links)
+# s
+  
+  ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
+  
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [License](#license)
+  * [Contact Me](#contact-me)
+  
+  ## Description
+  s
+  ## Installation
+  s
+  ## Usage
+  s
+  ## Contributing
+  s
+  ## Tests
+  s
+  ## License
+  This project is licensed under the MIT license.
+  ## Contact-Me
+  You can contact me through my Github account and email:
+  * GitHub username: [sssss](github.com/sssss)
+  * Email: ssssss
