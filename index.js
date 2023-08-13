@@ -4,40 +4,40 @@ const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = inquirer.prompt([
+const questions = [
     {
         type: "input",
-        name: "Title",
+        name: "title",
         message: "What title shall we use for your project?",
     },
     {
         type: "input",
-        name: "Description",
+        name: "description",
         message: "Enter your project description",
     },
     {
         type: "input",
-        name: "Installation",
+        name: "installation",
         message: "Write any installation instructions here",
     },
     {
         type: "input",
-        name: "Usage",
+        name: "usage",
         message: "Provide any examples, links or outputs of your project",
     },
     {
         type: "input",
-        name: "Contributing",
+        name: "contributing",
         message: "State if you are open to contributions and what your requirements are for accepting them"
     },
     {
         type: "input",
-        name: "Tests",
+        name: "tests",
         message: "Document any instructions for running tests on your project",
     },
     {
         type: "list",
-        name: "License",
+        name: "license",
         message: "Choose a license:",
         choices: [
             'None',
@@ -66,7 +66,7 @@ const questions = inquirer.prompt([
         name: "email",
         message: "Enter your email address",
     },
-]);
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -75,10 +75,13 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-
+    inquirer.prompt(questions).then((response) => {
+        writeToFile("README.md", generateMarkdown())
+    });
 }
 
 // Function call to initialize app
 init();
 
 module.exports = questions;
+console.log(questions);
