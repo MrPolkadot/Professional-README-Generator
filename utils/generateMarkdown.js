@@ -3,51 +3,12 @@ const index = require("../index");
 console.log(index.questions);
 
 
-// If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   if (license === index.questions.choices[0]) {
-//     return "";
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-//   if (license === ) {
-
-//   }
-// }
+//If there is no license, return an empty string
+function renderLicenseBadge(license) {
+  if (license !== "None") {
+    return `![Static Badge](https://img.shields.io/badge/license-${license}-blue)`;
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
